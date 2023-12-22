@@ -87,22 +87,22 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: '{{defaultContext}}:frontend'
-          platforms: linux/amd64,linux/arm64,linux/386,linux/arm/v7
+          platforms: linux/amd64
           push: true
           tags: |
-            xddxdd/bird-lg-go:develop
-            xddxdd/bird-lg-go:develop-${{ github.sha }}
-            ghcr.io/xddxdd/bird-lg-go:frontend-develop
-            ghcr.io/xddxdd/bird-lg-go:frontend-develop-${{ github.sha }}
+            enbitcon/bird-lg-go:develop
+            enbitcon/bird-lg-go:develop-${{ github.sha }}
+            ghcr.io/enbitcon/bird-lg-go:frontend-develop
+            ghcr.io/enbitcon/bird-lg-go:frontend-develop-${{ github.sha }}
 
       - name: Build proxy docker image
         uses: docker/build-push-action@v4
         with:
           context: '{{defaultContext}}:proxy'
-          platforms: linux/amd64,linux/arm64,linux/386,linux/arm/v7
+          platforms: linux/amd64
           push: true
           tags: |
-            xddxdd/bird-lgproxy-go:develop
-            xddxdd/bird-lgproxy-go:develop-${{ github.sha }}
-            ghcr.io/xddxdd/bird-lg-go:proxy-develop
-            ghcr.io/xddxdd/bird-lg-go:proxy-develop-${{ github.sha }}
+            enbitcon/bird-lgproxy-go:develop
+            enbitcon/bird-lgproxy-go:develop-${{ github.sha }}
+            ghcr.io/enbitcon/bird-lg-go:proxy-develop
+            ghcr.io/enbitcon/bird-lg-go:proxy-develop-${{ github.sha }}
