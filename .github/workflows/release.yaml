@@ -60,7 +60,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: '{{defaultContext}}:frontend'
-          platforms: linux/amd64,linux/arm64,linux/386,linux/arm/v7
+          platforms: linux/amd64
           push: true
           tags: |
             enbitcon/bird-lg-go:latest
@@ -72,7 +72,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: '{{defaultContext}}:proxy'
-          platforms: linux/amd64,linux/arm64,linux/386,linux/arm/v7
+          platforms: linux/amd64
           push: true
           tags: |
             enbitcon/bird-lgproxy-go:latest
