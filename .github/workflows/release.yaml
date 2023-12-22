@@ -63,8 +63,8 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            enbitcon/bird-lg-go:latest
-            enbitcon/bird-lg-go:${{ github.event.release.tag_name }}
+            ghcr.io/enbitcon/bird-lg-go:latest
+            ghcr.io/enbitcon/bird-lg-go:${{ github.event.release.tag_name }}
             ghcr.io/enbitcon/bird-lg-go:frontend
             ghcr.io/enbitcon/bird-lg-go:frontend-${{ github.event.release.tag_name }}
 
@@ -75,7 +75,7 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            enbitcon/bird-lgproxy-go:latest
-            enbitcon/bird-lgproxy-go:${{ github.event.release.tag_name }}
+            ghcr.io/enbitcon/bird-lgproxy-go:latest
+            ghcr.io/enbitcon/bird-lgproxy-go:${{ github.event.release.tag_name }}
             ghcr.io/enbitcon/bird-lg-go:proxy
             ghcr.io/enbitcon/bird-lg-go:proxy-${{ github.event.release.tag_name }}
